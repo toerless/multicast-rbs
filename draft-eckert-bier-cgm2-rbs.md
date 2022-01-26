@@ -927,6 +927,26 @@ TBD. Any aspects not covered in {{comparison}}.
 
 TBD: Comparison of number of packets/header sizes required
 in large real-world operator topology between BIER/BIER-TE and CGM2.
+Analysis: Gain in dense topology
+
+Topology description:
+1. Typical topology of Beijing Mobile in China.
+2. All zones dual homing access to backbone.
+3. Core layer: 4 nodes full mesh connected
+4. Aggregation layer: 8 nodes are divided into two layers, with full interconnection between the layers and dual homing access to the core layer on the upper layer.
+5. Aggregation rings: 8 rings, 6 nodes per ring
+6. Access rings: 3600 nodes, 18 nodes per ring
+
+
+Comparison notes:
+1.CGM2: We randomly select egress points as group members, with the total number ranging from 10 to 28800 (for sake of simplicity, we assume merely one client per egress point). The egress points are randomly distributed in the topology with 10 runs for each value, showing the average result in our graphs. The total number of samples is 60
+2.BIER: We divide the overall topology into 160 BIER domains, each of which includes 180 egress points, providing the total of 28000 egress points.
+3.Simulation: In order to compare the BIER against the in-packet tree encoding mechanism, we limit the size of the header to 256 bits (the typical size of a BIER header).
+
+Conclusion: 
+BIER reaches its 160 packet replication limit at about 500 users, while the in-packet tree encoding reaching its limit of 125 replications at about 12000 users. And the following decrease of replications is caused by the use of node-local broadcast as a further optimization. For the sake of comparison, the same 256-bit encapsulation limit is imposed on New IP multicast, but we can completely break the 256-bit encapsulation limit, thus allowing the source to send fewer multicast streams.
+CGM2 encoding performs significantly better than BIER in that it requires less packet replications and network bandwidth.
+
 
 ## Example use case scenarios
 
