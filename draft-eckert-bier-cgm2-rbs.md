@@ -995,7 +995,7 @@ Topology description:
                                        ┌─┴─┐   ┌─┴─┐    ┌─┴─┐   ┌─┴─┐
                                        │   │   │   │    │   │   │   │
                                        └─┬─┘   └─┬─┘    └─┬─┘   └─┬─┘
-                             		         │       │        │       │  
+                                         │       │        │       │  
                                          │       │ 8Rings │       │  
                                        ┌─┴─┐   ┌─┴─┐ ...┌─┴─┐   ┌─┴─┐
                                        │   │---│   │    │   │---│   │
@@ -1006,7 +1006,7 @@ Topology description:
                              /     /         \   |    \\       \   |   \ \   
                             /     /           \  |     \\       \  |    \ \  
                            /     /             \ |      \\       \ |     \ \ 
-			                ┌───┐   ┌───┐           ┌───┐   ┌───┐       ┌───┐   ┌───┐ CSBR
+		      ┌───┐   ┌───┐           ┌───┐   ┌───┐       ┌───┐   ┌───┐ CSBR
                       │   │   │   │           │   │   │   │       │   │   │   │ 
                       └─┬─┘   └─┬─┘           └─┬─┘   └─┬─┘       └─┬─┘   └─┬─┘ 
                         │       │    Access     │       │           │       │   
@@ -1021,9 +1021,10 @@ Topology description:
                       └───┘...└───┘           └───┘...└───┘       └───┘...└───┘ 
 
 Comparison notes:
-1.CGM2: We randomly select egress points as group members, with the total number ranging from 10 to 28800 (for sake of simplicity, we assume merely one client per egress point). The egress points are randomly distributed in the topology with 10 runs for each value, showing the average result in our graphs. The total number of samples is 60
-2.BIER: We divide the overall topology into 160 BIER domains, each of which includes 180 egress points, providing the total of 28000 egress points.
-3.Simulation: In order to compare the BIER against the in-packet tree encoding mechanism, we limit the size of the header to 256 bits (the typical size of a BIER header).
+1. CGM2: We randomly select egress points as group members, with the total number ranging from 10 to 28800 (for sake of simplicity, we assume merely one client per egress point). The egress points are randomly distributed in the topology with 10 runs for each value, showing the average result in our graphs. The total number of samples is 60
+2. BIER: We divide the overall topology into 160 BIER domains, each of which includes 180 egress points, providing the total of 28000 egress points.
+3. Simulation: In order to compare the BIER against the in-packet tree encoding mechanism, we limit the size of the header to 256 bits (the typical size of a BIER header).
+
 
 Conclusion: 
 BIER reaches its 160 packet replication limit at about 500 users, while the in-packet tree encoding reaching its limit of 125 replications at about 12000 users. And the following decrease of replications is caused by the use of node-local broadcast as a further optimization. For the sake of comparison, the same 256-bit encapsulation limit is imposed on New IP multicast, but we can completely break the 256-bit encapsulation limit, thus allowing the source to send fewer multicast streams.
