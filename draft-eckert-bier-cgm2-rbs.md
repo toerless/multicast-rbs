@@ -1025,7 +1025,7 @@ Comparison notes:
 2. BIER: We divide the overall topology into 160 BIER domains, each of which includes 180 egress points, providing the total of 28000 egress points.
 3. Simulation: In order to compare the BIER against the in-packet tree encoding mechanism, we limit the size of the header to 256 bits (the typical size of a BIER header).
 
-Modify the graph
+![image](https://user-images.githubusercontent.com/92767820/153332926-defe38e4-1b63-4b16-852f-feaae487d307.png)
 
 Conclusion: 
 1. BIER reaches its 160 packet replication limit at about 500 users, while the in-packet tree encoding reaching its limit of 125 replications at about 12000 users. And the following decrease of replications is caused by the use of node-local broadcast as a further optimization.
