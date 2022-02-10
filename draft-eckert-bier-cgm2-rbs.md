@@ -1025,7 +1025,6 @@ Comparison notes:
 2. BIER: We divide the overall topology into 160 BIER domains, each of which includes 180 egress points, providing the total of 28000 egress points.
 3. Simulation: In order to compare the BIER against the in-packet tree encoding mechanism, we limit the size of the header to 256 bits (the typical size of a BIER header).
 
-![image](https://user-images.githubusercontent.com/92767820/153329873-a33189d9-6d6f-4d54-9d40-392d6638295c.png)
 
 
 Conclusion: 
