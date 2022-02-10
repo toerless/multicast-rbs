@@ -1027,6 +1027,7 @@ Comparison notes:
 
 ![image](https://user-images.githubusercontent.com/92767820/153332926-defe38e4-1b63-4b16-852f-feaae487d307.png)
 
+
 Conclusion: 
 1. BIER reaches its 160 packet replication limit at about 500 users, while the in-packet tree encoding reaching its limit of 125 replications at about 12000 users. And the following decrease of replications is caused by the use of node-local broadcast as a further optimization.
 2. For the sake of comparison, the same 256-bit encapsulation limit is imposed on CGM2, but we can completely break the 256-bit encapsulation limit, thus allowing the source to send fewer multicast streams.
