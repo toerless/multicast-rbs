@@ -707,7 +707,7 @@ simulation.
 
 If the total size of an RBS encoded delivery tree is
 larger than a supported maximum RBS header size, then
-the CGM2 controller simply needs to divide the tree
+the controller simply needs to divide the tree
 into multiple subtrees, each only addressing a part
 of the BFER (leaves) of the target tree and pruning
 any unnecessary branches. 
@@ -725,7 +725,7 @@ any unnecessary branches.
 Consider the simple topology in {{FIG-SMPLT}} and a multicast packet
 that needs to reach all BFER B7...B300. Assume that
 the desired maximum RBM header size is such that a
-RBS address size of <= 256 bits is desired. The CGM2
+RBS address size of <= 256 bits is desired. The 
 controller could create an RBS address
 B1=>B2=>B4=>(B7..B99), for a first packet, an
 RBS address B1=>B3=>B5=>(B100..B200) for a second
@@ -749,13 +749,13 @@ address all BFER B7..B99 or to B5 to address all
 B100..B200 or B6 to address all B201...B300. These
 unnecessary duplicate packets across B4, B5 or B6 are
 because of the addressing principle in BIER and are not
-necessary in CGM2, as long as the total length of an RBS
+necessary in RBS, as long as the total length of an RBS
 address does not require it.
 
-## Statistical Analysis of performance gain with CGM2 {#analysis}
+## Statistical Analysis of performance gain {#analysis}
 
 TBD: Comparison of number of packets/header sizes required
-in large real-world operator topology between BIER/BIER-TE and CGM2.
+in large real-world operator topology between BIER/BIER-TE and RBS.
 Analysis: Gain in dense topology
 
 Topology description:
@@ -852,7 +852,7 @@ Topology description:
 
 Comparison notes:
 
-1. CGM2: We randomly select egress points as group members, with the total number ranging from 10 to 28800 (for sake of simplicity, we assume merely one client per egress point). The egress points are randomly distributed in the topology with 10 runs for each value, showing the average result in our graphs as below. The total number of samples is 60
+1. RBS: We randomly select egress points as group members, with the total number ranging from 10 to 28800 (for sake of simplicity, we assume merely one client per egress point). The egress points are randomly distributed in the topology with 10 runs for each value, showing the average result in our graphs as below. The total number of samples is 60
 2. BIER: We divide the overall topology into 160 BIER domains, each of which includes 180 egress points, providing the total of 28000 egress points.
 3. Simulation: In order to compare the BIER against the in-packet tree encoding mechanism, we limit the size of the header to 256 bits (the typical size of a BIER header).
 
@@ -861,7 +861,7 @@ Results are shown in the following image: https://user-images.githubusercontent.
 Conclusions: 
 
 1. BIER reaches its 160 packet replication limit at about 500 users, while the in-packet tree encoding reaching its limit of 125 replications at about 12000 users. And the following decrease of replications is caused by the use of node-local broadcast as a further optimization.
-2. For the sake of comparison, the same 256-bit encapsulation limit is imposed on CGM2, but we can completely break the 256-bit encapsulation limit, thus allowing the source to send fewer multicast streams.
-3. CCGM2 encoding performs significantly better than BIER in that it requires less packet replications and network bandwidth.
+2. For the sake of comparison, the same 256-bit encapsulation limit is imposed on RBS, but we can completely break the 256-bit encapsulation limit, thus allowing the source to send fewer multicast streams.
+3. RBS encoding performs significantly better than BIER in that it requires less packet replications and network bandwidth.
 
 
