@@ -844,9 +844,9 @@ Internet-Draft                  bier-rbs                    October 2022
 
    This document is written in https://github.com/cabo/kramdown-rfc2629
    markup language.  This documents source is maintained at
-   https://github.com/toerless/rbs, please provide feedback to the
-   bier@ietf.org and/or msr6@ietf.org mailing list and submit an Issue
-   to the GitHub.
+   https://github.com/toerless/multicast-rbs, please provide feedback to
+   the bier@ietf.org and/or msr6@ietf.org mailing list and submit an
+   Issue to the GitHub.
 
    This draft is derived from and superceeds [I-D.eckert-bier-cgm2-rbs]
    as follows:

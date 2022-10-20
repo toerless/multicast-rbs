@@ -648,7 +648,7 @@ Many thanks for Bing Xu (bing.xu@huawei.com) for editorial work on the prior var
 \[RFC-editor: please remove\]
 
 This document is written in https://github.com/cabo/kramdown-rfc2629 markup language.
-This documents source is maintained at https://github.com/toerless/rbs,
+This documents source is maintained at https://github.com/toerless/multicast-rbs,
 please provide feedback to the bier@ietf.org and/or msr6@ietf.org mailing list and submit an Issue
 to the GitHub.
 
