@@ -5,13 +5,13 @@
 BIER                                                      T. Eckert, Ed.
 Internet-Draft                                Futurewei Technologies USA
 Intended status: Experimental                                   M. Menth
-Expires: 23 April 2023                           University of Tuebingen
+Expires: 25 April 2023                           University of Tuebingen
                                                                  X. Geng
                                                                 X. Zheng
                                                                  R. Meng
                                                                    F. Li
                                                       Huawei 2012 NT Lab
-                                                         20 October 2022
+                                                         22 October 2022
 
 
     Recursive BitString Structure (RBS) Addresses for BIER and MSR6
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Eckert, et al.            Expires 23 April 2023                 [Page 1]
+Eckert, et al.            Expires 25 April 2023                 [Page 1]
 
 Internet-Draft                  bier-rbs                    October 2022
 
@@ -63,7 +63,7 @@ Internet-Draft                  bier-rbs                    October 2022
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 April 2023.
+   This Internet-Draft will expire on 25 April 2023.
 
 Copyright Notice
 
@@ -103,26 +103,27 @@ Table of Contents
      4.6.  Encapsulation considerations  . . . . . . . . . . . . . .  12
      4.7.  RBS forwarding Pseudocode . . . . . . . . . . . . . . . .  13
    5.  Using RBS with BIER and RFC8296 encapsulation . . . . . . . .  15
-   6.  Security considerations . . . . . . . . . . . . . . . . . . .  15
-   7.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  15
-   8.  Changelog . . . . . . . . . . . . . . . . . . . . . . . . . .  15
+   6.  Using RBS with IPv6 extension header encapsulation  . . . . .  15
+   7.  Security considerations . . . . . . . . . . . . . . . . . . .  16
+   8.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  16
 
 
 
-Eckert, et al.            Expires 23 April 2023                 [Page 2]
+Eckert, et al.            Expires 25 April 2023                 [Page 2]
 
 Internet-Draft                  bier-rbs                    October 2022
 
 
-   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  16
-     9.1.  Normative References  . . . . . . . . . . . . . . . . . .  16
-     9.2.  Informative References  . . . . . . . . . . . . . . . . .  16
-   Appendix A.  High-speed implementation considerations . . . . . .  17
-   Appendix B.  Complete RBS example . . . . . . . . . . . . . . . .  18
-   Appendix C.  Replication efficiency performance considerations  .  18
-     C.1.  Reducing number of duplicate packet copies  . . . . . . .  18
-     C.2.  Statistical Analysis of performance gain  . . . . . . . .  19
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  22
+   9.  Changelog . . . . . . . . . . . . . . . . . . . . . . . . . .  16
+   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  17
+     10.1.  Normative References . . . . . . . . . . . . . . . . . .  17
+     10.2.  Informative References . . . . . . . . . . . . . . . . .  17
+   Appendix A.  High-speed implementation considerations . . . . . .  18
+   Appendix B.  Complete RBS example . . . . . . . . . . . . . . . .  19
+   Appendix C.  Replication efficiency performance considerations  .  19
+     C.1.  Reducing number of duplicate packet copies  . . . . . . .  19
+     C.2.  Statistical Analysis of performance gain  . . . . . . . .  20
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  23
 
 1.  Introduction
 
@@ -164,8 +165,7 @@ Internet-Draft                  bier-rbs                    October 2022
 
 
 
-
-Eckert, et al.            Expires 23 April 2023                 [Page 3]
+Eckert, et al.            Expires 25 April 2023                 [Page 3]
 
 Internet-Draft                  bier-rbs                    October 2022
 
@@ -221,7 +221,7 @@ Internet-Draft                  bier-rbs                    October 2022
 
 
 
-Eckert, et al.            Expires 23 April 2023                 [Page 4]
+Eckert, et al.            Expires 25 April 2023                 [Page 4]
 
 Internet-Draft                  bier-rbs                    October 2022
 
@@ -277,7 +277,7 @@ Internet-Draft                  bier-rbs                    October 2022
 
 
 
-Eckert, et al.            Expires 23 April 2023                 [Page 5]
+Eckert, et al.            Expires 25 April 2023                 [Page 5]
 
 Internet-Draft                  bier-rbs                    October 2022
 
@@ -333,7 +333,7 @@ Internet-Draft                  bier-rbs                    October 2022
 
 
 
-Eckert, et al.            Expires 23 April 2023                 [Page 6]
+Eckert, et al.            Expires 25 April 2023                 [Page 6]
 
 Internet-Draft                  bier-rbs                    October 2022
 
@@ -389,7 +389,7 @@ Internet-Draft                  bier-rbs                    October 2022
 
 
 
-Eckert, et al.            Expires 23 April 2023                 [Page 7]
+Eckert, et al.            Expires 25 April 2023                 [Page 7]
 
 Internet-Draft                  bier-rbs                    October 2022
 
@@ -445,7 +445,7 @@ Internet-Draft                  bier-rbs                    October 2022
 
 
 
-Eckert, et al.            Expires 23 April 2023                 [Page 8]
+Eckert, et al.            Expires 25 April 2023                 [Page 8]
 
 Internet-Draft                  bier-rbs                    October 2022
 
@@ -501,7 +501,7 @@ Internet-Draft                  bier-rbs                    October 2022
 
 
 
-Eckert, et al.            Expires 23 April 2023                 [Page 9]
+Eckert, et al.            Expires 25 April 2023                 [Page 9]
 
 Internet-Draft                  bier-rbs                    October 2022
 
@@ -557,7 +557,7 @@ Internet-Draft                  bier-rbs                    October 2022
 
 
 
-Eckert, et al.            Expires 23 April 2023                [Page 10]
+Eckert, et al.            Expires 25 April 2023                [Page 10]
 
 Internet-Draft                  bier-rbs                    October 2022
 
@@ -613,7 +613,7 @@ Internet-Draft                  bier-rbs                    October 2022
 
 
 
-Eckert, et al.            Expires 23 April 2023                [Page 11]
+Eckert, et al.            Expires 25 April 2023                [Page 11]
 
 Internet-Draft                  bier-rbs                    October 2022
 
@@ -669,7 +669,7 @@ Internet-Draft                  bier-rbs                    October 2022
 
 
 
-Eckert, et al.            Expires 23 April 2023                [Page 12]
+Eckert, et al.            Expires 25 April 2023                [Page 12]
 
 Internet-Draft                  bier-rbs                    October 2022
 
@@ -725,7 +725,7 @@ Internet-Draft                  bier-rbs                    October 2022
 
 
 
-Eckert, et al.            Expires 23 April 2023                [Page 13]
+Eckert, et al.            Expires 25 April 2023                [Page 13]
 
 Internet-Draft                  bier-rbs                    October 2022
 
@@ -742,7 +742,7 @@ Internet-Draft                  bier-rbs                    October 2022
         *(RBSc.RULength) = 0
         *(MSR6c.SegmentsLeft) -= 1
       }
-      Forward(PacketCopy)
+      SendTo(PacketCopy, BIFT.BP[Index].adjacency)
       Index = GetNextBitPosition(*BitStringA, Index);
     }
   }
@@ -775,13 +775,13 @@ Internet-Draft                  bier-rbs                    October 2022
    as received.  This is done via variable RemainLength.
 
    For every PacketCopy that is to be forwarded, the RU-Length and RU-
-   Offset fields are updated.
+   Offset fields are updated.  SendTo(packet,adjacency) takes care of
+   any encapsulation/architecture specific further rewrites of the
+   packet headers based on the adjcency of the BP.
 
 
 
-
-
-Eckert, et al.            Expires 23 April 2023                [Page 14]
+Eckert, et al.            Expires 25 April 2023                [Page 14]
 
 Internet-Draft                  bier-rbs                    October 2022
 
@@ -817,12 +817,46 @@ Internet-Draft                  bier-rbs                    October 2022
    of an RBS-Address the smallest power of 2 BitString size can be used
    without duplication of BIFT state on routers.
 
+   SendTo() of RBS forwarding pseudocode Section 4.7 needs to take care
+   of any BIER specific rewrites of the [RFC8296] BIER header,
+   specifically the BIFT-id derived from the RBS-BIFT adjacency.
+
    TBD: This description does not outline, how much of existing BIER IGP
    extensions could be reused with RBS and how.
 
-6.  Security considerations
+6.  Using RBS with IPv6 extension header encapsulation
 
-7.  Acknowledgements
+   Solutions for stateless IP multicast have been proposed to the IETF
+   under the name Multicast Source Routing for IPv6 (MSR6).  They are
+   based on putting the stateless multicast structures into an IPv6
+   routing extension headers and using per-steering-hop rules according
+   to or derived from [RFC8200], Section 4.4 rules.  IPv6 forwarding")
+   for source routing.
+
+
+
+
+
+Eckert, et al.            Expires 25 April 2023                [Page 15]
+
+Internet-Draft                  bier-rbs                    October 2022
+
+
+   SendTo() of RBS forwarding pseudocode Section 4.7 needs to take care
+   of any IPv6 specific rewrites of the IPv6 header (IPv6 Destination
+   address) and IPv6 routing extension header.
+
+   For complete support of IPv6 multicast with [RFC8200] compliant
+   source routing, it is necessary for the IPv6 routing extension header
+   to not only carry the RBS address information but also an IPv6
+   multicast destination address field.
+
+   [I-D.eckert-msr6-rbs] is a proposed IPv6 extension header design for
+   MSR6 using RBS that is supporting IPv6 multicast.
+
+7.  Security considerations
+
+8.  Acknowledgements
 
    This work is based on the design published by Sheng Jiang, Xu Bing,
    Yan Shen, Meng Rui, Wan Junjie and Wang Chuang {jiangsheng|bing.xu|ya
@@ -830,17 +864,9 @@ Internet-Draft                  bier-rbs                    October 2022
    Many thanks for Bing Xu (bing.xu@huawei.com) for editorial work on
    the prior variation of this work [I-D.xu-msr6-rbs].
 
-8.  Changelog
+9.  Changelog
 
    [RFC-editor: please remove]
-
-
-
-
-Eckert, et al.            Expires 23 April 2023                [Page 15]
-
-Internet-Draft                  bier-rbs                    October 2022
-
 
    This document is written in https://github.com/cabo/kramdown-rfc2629
    markup language.  This documents source is maintained at
@@ -861,6 +887,17 @@ Internet-Draft                  bier-rbs                    October 2022
    *  Define its procedures independent of specific architectures such
       as BIER wih RFC8296 encapsulation or proposed MSR encoding.
 
+
+
+
+
+
+
+Eckert, et al.            Expires 25 April 2023                [Page 16]
+
+Internet-Draft                  bier-rbs                    October 2022
+
+
    *  Inherits the RBS specific improvements originally introduced with
       [I-D.eckert-msr6-rbs].  RU-Length and RU-Offset to avoid rewriting
       complete RBS address with the RU of the next hop and instead just
@@ -868,9 +905,14 @@ Internet-Draft                  bier-rbs                    October 2022
 
    *  Adds specific proposed encapsulation details for BIER.
 
-9.  References
+10.  References
 
-9.1.  Normative References
+10.1.  Normative References
+
+   [RFC8200]  Deering, S. and R. Hinden, "Internet Protocol, Version 6
+              (IPv6) Specification", STD 86, RFC 8200,
+              DOI 10.17487/RFC8200, July 2017,
+              <https://www.rfc-editor.org/info/rfc8200>.
 
    [RFC8279]  Wijnands, IJ., Ed., Rosen, E., Ed., Dolganow, A.,
               Przygienda, T., and S. Aldrin, "Multicast Using Bit Index
@@ -889,14 +931,7 @@ Internet-Draft                  bier-rbs                    October 2022
               RFC 9262, DOI 10.17487/RFC9262, October 2022,
               <https://www.rfc-editor.org/info/rfc9262>.
 
-9.2.  Informative References
-
-
-
-Eckert, et al.            Expires 23 April 2023                [Page 16]
-
-Internet-Draft                  bier-rbs                    October 2022
-
+10.2.  Informative References
 
    [CGM2Design]
               Jiang, S., Xu, B. (Robin)., Shen, Y., Rui, M., Junjie, W.,
@@ -904,6 +939,20 @@ Internet-Draft                  bier-rbs                    October 2022
               Introduction", 10 October 2021,
               <https://github.com/BingXu1112/CGMM/blob/main/Novel%20Mult
               icast%20Protocol%20Proposal%20Introduction.pptx>.
+
+
+
+
+
+
+
+
+
+
+Eckert, et al.            Expires 25 April 2023                [Page 17]
+
+Internet-Draft                  bier-rbs                    October 2022
+
 
    [I-D.eckert-bier-cgm2-rbs]
               Eckert, T. T. and B. Xu, "Carrier Grade Minimalist
@@ -947,18 +996,19 @@ Appendix A.  High-speed implementation considerations
    optimizations to reduce calculations are possible, but at the expense
    of compression of the RBS address.
 
-
-
-Eckert, et al.            Expires 23 April 2023                [Page 17]
-
-Internet-Draft                  bier-rbs                    October 2022
-
-
    RBS also minimizes write-cycles to packet memory by only requiring
    per-packet-copy rewrites of the RU-Length and RU-Offset fields.  With
    mandatory encoding of 12 bits each, these are 24 bits to rewrite and
    should therefore be causing minimal cost with todays high-speed
    forwarding hardware.
+
+
+
+
+Eckert, et al.            Expires 25 April 2023                [Page 18]
+
+Internet-Draft                  bier-rbs                    October 2022
+
 
 Appendix B.  Complete RBS example
 
@@ -1000,16 +1050,6 @@ C.1.  Reducing number of duplicate packet copies
    B1=>B3=>B5=>(B100..B200) for a second packet and a third RBS address
    B1=>B3=>B6=>B201...B300.
 
-
-
-
-
-
-Eckert, et al.            Expires 23 April 2023                [Page 18]
-
-Internet-Draft                  bier-rbs                    October 2022
-
-
    The elimination of larger BIFT state in BFR through multiple SI in
    BIER/BIER-TE does come at the expense of replicating initial hops of
    a tree in RBS addresses, such as in the example the encoding of
@@ -1018,6 +1058,14 @@ Internet-Draft                  bier-rbs                    October 2022
    Consider that the assignment of BFIR-ids with BIER in the above
    example is not carefully engineered.  It is then easily possible that
    the BFR-ids for B7..B99 are not sequentially, but split over a larger
+
+
+
+Eckert, et al.            Expires 25 April 2023                [Page 19]
+
+Internet-Draft                  bier-rbs                    October 2022
+
+
    BFIR-id space.  If the same is true for all BFER, then it is possible
    that each of the three BFR B4,B5 and B6 has attached BFER from three
    different SI and one may need to send for example three multiple
@@ -1058,14 +1106,6 @@ C.2.  Statistical Analysis of performance gain
                        └───┬──┘      └───┬──┘
                            │   \     /   │  Dual Return Access
                            │    \   /    │
-
-
-
-Eckert, et al.            Expires 23 April 2023                [Page 19]
-
-Internet-Draft                  bier-rbs                    October 2022
-
-
                            │     \ /     │
                            │      /      │
                            │     / \     │
@@ -1074,6 +1114,14 @@ Internet-Draft                  bier-rbs                    October 2022
                          └─┬───┘\   /└───┬─┘
                            │     \ /     │  Core Layer
                            │      /      │
+
+
+
+Eckert, et al.            Expires 25 April 2023                [Page 20]
+
+Internet-Draft                  bier-rbs                    October 2022
+
+
                            │     / \     │
                          ┌─┴───┐/   \┌───┴─┐
                         /│     ├─────┤     │\
@@ -1114,14 +1162,6 @@ Internet-Draft                  bier-rbs                    October 2022
                 ----└───┘   └───┘    └───┘\  └───┘
                /   /   \  \   |  \       \ \    |  \
              /    /     \  \  |   \       \ +---|-+ \
-
-
-
-Eckert, et al.            Expires 23 April 2023                [Page 20]
-
-Internet-Draft                  bier-rbs                    October 2022
-
-
             /    /       \  +-|---+\       \    |  \ \
           /     /         \   |    \\       \   |   \ \
          /     /           \  |     \\       \  |    \ \
@@ -1130,6 +1170,14 @@ Internet-Draft                  bier-rbs                    October 2022
    │   │   │   │           │   │   │   │       │   │   │   │
    └─┬─┘   └─┬─┘           └─┬─┘   └─┬─┘       └─┬─┘   └─┬─┘
      │       │    Access     │       │           │       │
+
+
+
+Eckert, et al.            Expires 25 April 2023                [Page 21]
+
+Internet-Draft                  bier-rbs                    October 2022
+
+
      │       │    Rings      │       │           │       │
    ┌─┴─┐   ┌─┴─┐  ...      ┌─┴─┐   ┌─┴─┐       ┌─┴─┐   ┌─┴─┐
    │   │   │   │           │   │   │   │       │   │   │   │
@@ -1171,13 +1219,6 @@ Internet-Draft                  bier-rbs                    October 2022
        replications is caused by the use of node-local broadcast as a
        further optimization.
 
-
-
-Eckert, et al.            Expires 23 April 2023                [Page 21]
-
-Internet-Draft                  bier-rbs                    October 2022
-
-
    2.  For the sake of comparison, the same 256-bit encapsulation limit
        is imposed on RBS, but we can completely break the 256-bit
        encapsulation limit, thus allowing the source to send fewer
@@ -1185,6 +1226,13 @@ Internet-Draft                  bier-rbs                    October 2022
 
    3.  RBS encoding performs significantly better than BIER in that it
        requires less packet replications and network bandwidth.
+
+
+
+Eckert, et al.            Expires 25 April 2023                [Page 22]
+
+Internet-Draft                  bier-rbs                    October 2022
+
 
 Authors' Addresses
 
@@ -1229,4 +1277,12 @@ Authors' Addresses
 
 
 
-Eckert, et al.            Expires 23 April 2023                [Page 22]
+
+
+
+
+
+
+
+
+Eckert, et al.            Expires 25 April 2023                [Page 23]

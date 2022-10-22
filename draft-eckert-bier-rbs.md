@@ -51,6 +51,7 @@ normative:
   RFC8279:
   RFC8296:
   RFC9262:
+  RFC8200:
 
 informative:
   I-D.eckert-msr6-rbs:
@@ -573,7 +574,7 @@ pointers was used. This is NOT supported by C language!
           *(RBSc.RULength) = 0
           *(MSR6c.SegmentsLeft) -= 1
         }
-        Forward(PacketCopy)
+        SendTo(PacketCopy, BIFT.BP[Index].adjacency)
         Index = GetNextBitPosition(*BitStringA, Index);
       }
     }
@@ -606,7 +607,9 @@ By subtracting the length of the prior N-1 RecursiveUnits from
 RULength as received. This is done via variable RemainLength.
 
 For every PacketCopy that is to be forwarded, the RU-Length  and RU-Offset
-fields are updated.
+fields are updated. SendTo(packet,adjacency) takes care of any
+encapsulation/architecture specific further rewrites of the packet headers
+based on the adjcency of the BP.
 
 # Using RBS with BIER and RFC8296 encapsulation
 
@@ -633,8 +636,30 @@ it SHOULD be possible for all supported BSL to refer to the same RBS-BIFT, so th
 imposition of an RBS-Address the smallest power of 2 BitString size can be used without
 duplication of BIFT state on routers.
 
+SendTo() of RBS forwarding pseudocode {{pseudocode}} needs to take care of any BIER
+specific rewrites of the {{RFC8296}} BIER header, specifically the BIFT-id derived from
+the RBS-BIFT adjacency.
+
 TBD: This description does not outline, how much of existing BIER IGP extensions could be
 reused with RBS and how.
+
+# Using RBS with IPv6 extension header encapsulation
+
+Solutions for stateless IP multicast have been proposed to the IETF under the name
+Multicast Source Routing for IPv6 (MSR6). They are based on putting the stateless multicast
+structures into an IPv6 routing extension headers and using per-steering-hop rules according to
+or derived from {{RFC8200}}, Section 4.4 rules.  IPv6 forwarding") for source routing.
+
+SendTo() of RBS forwarding pseudocode {{pseudocode}} needs to take care of any IPv6
+specific rewrites of the IPv6 header (IPv6 Destination address) and IPv6 routing extension
+header.
+
+For complete support of IPv6 multicast with {{RFC8200}} compliant source routing, it
+is necessary for the IPv6 routing extension header to not only carry the RBS address information
+but also an IPv6 multicast destination address field.
+
+{{I-D.eckert-msr6-rbs}} is a proposed IPv6 extension header design for MSR6 using RBS that
+is supporting IPv6 multicast.
 
 # Security considerations
 
